@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: smt-website
+  labels:
+    app: smt-app
+    type: front-end
+spec:
+  containers:
+    - name: smt-website
+      image: krishnansai/smt-website
