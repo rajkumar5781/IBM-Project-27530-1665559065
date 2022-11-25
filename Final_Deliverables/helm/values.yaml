@@ -1,0 +1,19 @@
+apiversion: apps/v1
+app_name: sai-back-app
+labels:
+  type: my-api-app
+imageTag: krishnansai/new-sag:1.0
+port: 4000
+secretFile: dbsecret
+replicaCount: 1
+svc_type: LoadBalancer
+scalepod_value: 1
+scale_periodsecond: 2
+scale_minreplicas: 1
+scale_maxreplicas: 3
+cpu_utilization_limit: 5
+hpa_apiversion: autoscaling/v1
+request_cpu: 1
+request_memory: 500Mi
+limit_cpu: 1
+limit_memory: 1Gi
